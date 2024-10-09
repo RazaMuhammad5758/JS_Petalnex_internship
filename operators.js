@@ -87,3 +87,11 @@ console.log(cond_3 || cond_4);
 
 console.log(!(a > b));
 
+// TRUNARY OPERATOR
+
+let age = 20;
+
+let result = age>= 20 ? 'Adult' : 'under age';
+
+console.log(result);
+

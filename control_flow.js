@@ -36,3 +36,26 @@ if (color === 'pink'){
     console.log('color is dark');
     
 }
+
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+var fruit = prompt('which fruit do you want');
+
+switch (fruit) {
+    case 'mango':
+        console.log('150 rs per kg');
+        break;
+    
+    case 'banana':
+        console.log('100 rs dozen');
+        break;
+
+    case 'apple':
+        console.log('100rs per kg');
+        break;
+    default:
+        console.log('we dont have this fruit');
+        
+        break;
+}
