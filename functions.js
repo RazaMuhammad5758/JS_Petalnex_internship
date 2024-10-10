@@ -16,9 +16,27 @@
 // }
 // console.log(loggedIn('raza'))
 
+
+
 // REST OPERATOR IN FUNCTION
 
-function CalcCartPrice(...num1){
-    return num1
+// function CalcCartPrice(...num1){
+//     return num1
+// }
+// console.log(CalcCartPrice(200, 300, 400));
+
+
+
+// OBJECT IN FUNCTION
+
+const user = {
+    name: 'Raza',
+    price: '500'
 }
-console.log(CalcCartPrice(200, 300, 400));
+
+
+function userinfo(object){
+    console.log(`Name is ${object.name}. and Bill is ${object.price}`);
+    
+}
+userinfo(user)
