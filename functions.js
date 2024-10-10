@@ -37,6 +37,15 @@ const user = {
 
 function userinfo(object){
     console.log(`Name is ${object.name}. and Bill is ${object.price}`);
-    
 }
 userinfo(user)
+
+// ANother way 
+
+function userinfo(object){
+    console.log(`Name is ${object.name}. and Bill is ${object.price}`);
+}
+userinfo({
+    name: 'moiz',
+    price: 800
+})
