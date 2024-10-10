@@ -29,23 +29,35 @@
 
 // OBJECT IN FUNCTION
 
-const user = {
-    name: 'Raza',
-    price: '500'
+// const user = {
+//     name: 'Raza',
+//     price: '500'
+// }
+
+
+// function userinfo(object){
+//     console.log(`Name is ${object.name}. and Bill is ${object.price}`);
+// }
+// userinfo(user)
+
+// // ANother way 
+
+// function userinfo(object){
+//     console.log(`Name is ${object.name}. and Bill is ${object.price}`);
+// }
+// userinfo({
+//     name: 'moiz',
+//     price: 800
+// })
+
+
+
+// ARRAY IN FUNCTION
+
+const myarray = [200, 300, 400]
+
+function printArray(anyArray){
+    console.log(anyArray[1]);
+    
 }
-
-
-function userinfo(object){
-    console.log(`Name is ${object.name}. and Bill is ${object.price}`);
-}
-userinfo(user)
-
-// ANother way 
-
-function userinfo(object){
-    console.log(`Name is ${object.name}. and Bill is ${object.price}`);
-}
-userinfo({
-    name: 'moiz',
-    price: 800
-})
+printArray(myarray)
