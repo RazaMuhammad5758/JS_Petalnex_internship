@@ -11,7 +11,14 @@
 // console.log(result);
 
 
-function loggedIn(username){
-    return `${username} just logged in`
+// function loggedIn(username){
+//     return `${username} just logged in`
+// }
+// console.log(loggedIn('raza'))
+
+// REST OPERATOR IN FUNCTION
+
+function CalcCartPrice(...num1){
+    return num1
 }
-console.log(loggedIn('raza'))
+console.log(CalcCartPrice(200, 300, 400));
