@@ -4,8 +4,8 @@
 // | | ├── pop()     last value remove krta h
 // | | ├── shift()
 // | | ├── unshift()  start me value add krtra h
-// | | ├── splice()
-// | | ├── slice()
+// | | ├── splice()     array me se given range ko ghaeb kr k wahi print krta h
+// | | ├── slice()    given range ko print krta h except last
 // | | └── concat()
 // | └── Array iteration
 // | ├── forEach()
@@ -24,5 +24,7 @@ MyArray.unshift(15)  // start me value add krtra h
 
 MyArray.shift()  // start ki value remove krta h
 
+const newArray = MyArray.join()  // array ko string me convert krta h
 
+console.log(newArray);
 console.log(MyArray);
