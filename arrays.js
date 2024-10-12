@@ -2,11 +2,11 @@
 // | ├── Array methods
 // | | ├── push()    last me value add krta h
 // | | ├── pop()     last value remove krta h
-// | | ├── shift()
+// | | ├── shift()    start ki value remove krta h
 // | | ├── unshift()  start me value add krtra h
 // | | ├── splice()     array me se given range ko ghaeb kr k wahi print krta h
 // | | ├── slice()    given range ko print krta h except last
-// | | └── concat()
+// | | └── concat()   2 arrays ko merge krta h
 // | └── Array iteration
 // | ├── forEach()
 // | ├── map()
@@ -28,3 +28,16 @@ const newArray = MyArray.join()  // array ko string me convert krta h
 
 console.log(newArray);
 console.log(MyArray);
+
+
+const ArrayOne = ["a", "b", "c"]
+const ArrayTwo = ["d", "e", "f"]
+
+const result = ArrayOne.concat(ArrayTwo)  // merge two arrays
+
+// another way of doing this is spread method 
+
+const result2 = [...ArrayOne, ...ArrayTwo]
+
+console.log(result);
+console.log(result2);
