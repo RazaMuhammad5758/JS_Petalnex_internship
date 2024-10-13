@@ -62,3 +62,16 @@ function agesfunc(age) {
 
 console.log(fAges);
 
+// REDUCE 
+
+const prices = [100, 200, 400, 540]
+
+const total = prices.reduce(sum);
+
+console.log(total);
+
+
+function sum(current, next){
+    return current + next
+}
+
