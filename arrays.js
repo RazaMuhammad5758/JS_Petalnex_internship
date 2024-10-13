@@ -35,9 +35,19 @@ const ArrayTwo = ["d", "e", "f"]
 
 const result = ArrayOne.concat(ArrayTwo)  // merge two arrays
 
-// another way of doing this is spread method 
+// another way of doing this is spread operator
 
 const result2 = [...ArrayOne, ...ArrayTwo]
 
 console.log(result);
 console.log(result2);
+
+const another_array = [1,2,3,4,[5,6,7,8,[9,10,11,12]]]
+
+const real_another_array = another_array.flat(Infinity)  // array k items ko flat krta h
+
+console.log(real_another_array);
+
+
+console.log(Array.from("abcdefg"));  // kisi b text ko array me convert krega
+
