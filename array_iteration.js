@@ -48,3 +48,17 @@ const infoArray2 = infoArray.map(function(name){
 
 console.log(infoArray2);
 
+
+// FILTER   condition k mutabiq array ko filter kr k new array bna k deta h
+
+
+const Ages = [15, 16, 13, 10, 55]
+
+const fAges = Ages.filter(agesfunc)
+
+function agesfunc(age) {
+    return age >= 15
+}
+
+console.log(fAges);
+
