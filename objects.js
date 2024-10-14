@@ -51,6 +51,20 @@ app2.IsLoggedIn = false
 
 console.log(app2);
 
+  // OBJECT INSIDE OBJECT
+const newUser = {
+    email: "abc@gmail.com",
+    fullname: {
+        userFullName: {
+            firstname: "raza",
+            lastname: "muhammad"
+        }
+    }
+}
+
+console.log(newUser.fullname.userFullName.firstname);
+
+
 
 
 
