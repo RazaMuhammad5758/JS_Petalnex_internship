@@ -70,9 +70,23 @@ const obj1 = {1: "a", 2: "b"}
 const obj2 = {3: "c", 4: "d"}
 
 const obj3 = Object.assign(obj1, obj2)
-
 console.log(obj3);
 
+// another method 
+
+const obj4 = {...obj1, ...obj2}
 
 
+console.log(obj4);
 
+// Objecct.keys    // keys deta h jese id: , name:, email:, etc
+
+console.log(Object.keys(obj2));
+
+// object.values   // keys ki values deta h
+
+console.log(Object.values(obj1));
+
+// object.entries  // keys or values ko array me bnd kr k deta h
+
+console.log(Object.entries(obj1));  
