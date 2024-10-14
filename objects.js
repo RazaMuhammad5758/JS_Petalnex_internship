@@ -39,6 +39,17 @@ Object.freeze(user)
 user.name = "raza muhammad"
 console.log(user.name);
 
+// SINGLE TON OBJECT
+
+// const app = new Object()   // ye singleton object h
+
+const app2 = {}     // non singleton object
+
+app2.id = "123abc"
+app2.name = "raza"
+app2.IsLoggedIn = false
+
+console.log(app2);
 
 
 
