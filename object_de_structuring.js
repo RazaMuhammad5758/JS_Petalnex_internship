@@ -8,4 +8,9 @@ const course = {
 
 const {price} = course
 
+const {courseInstructor: Instructor} = course
+
+// is tariqe se hum value ka name change b kr skty hen (de_structuring)
+
 console.log(price);
+console.log(Instructor);
