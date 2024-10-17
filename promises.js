@@ -54,3 +54,29 @@ promiseThree.then(function(user){
     console.log(user);
     
 })
+
+
+// another way
+
+const promiseFour = new Promise(function(resolve, reject){
+    setTimeout(function(){
+        let error = false;
+        if(!error){
+            resolve({name: "moiz", fathername: "AbdulRehman"})
+        }else{
+            reject("Error occur")
+        }
+    }, 1000)
+   
+})
+
+promiseFour.then((user)=>{
+    console.log(user);
+    return user.name
+}).then((username)=>{
+    console.log(username);
+    
+}).catch(function(error){
+    console.log(error);
+    
+})
