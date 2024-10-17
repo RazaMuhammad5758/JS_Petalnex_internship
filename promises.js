@@ -83,3 +83,28 @@ promiseFour.then((user)=>{
     console.log("The promise is either resolved or rejected");
     
 })
+
+// another way TRY CATCH
+
+const promiseFive = new Promise(function(resolve, reject){
+    setTimeout(function(){
+        let error = false;
+        if(!error){
+            resolve({course: "PHP", price: "1000"})
+        }else{
+            reject("Rejected")
+        }
+    },1000)
+})
+
+async function consumePromiseFive() {
+    try{
+        const response = await promiseFive
+        console.log(response);
+    } catch (error){
+        console.log(error);
+    }
+    
+}
+consumePromiseFive()
+
