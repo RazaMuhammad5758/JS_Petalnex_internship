@@ -1,3 +1,3 @@
-const hi = require("./modules1")
-hi.hello()
-hi.ahello("moiz")
+const {hello, ahello} = require("./modules1")
+hello()
+ahello("moiz")

@@ -3,7 +3,7 @@ const hello =()=>{
 }
 
 const ahello =(name)=>{
-    console.log("hellow"+ name);
+    console.log("hellow "+ name);
     
 }
 
