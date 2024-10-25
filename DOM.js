@@ -5,3 +5,11 @@
 // 3. Changing CSS
 // 4. Event listener
 
+
+const a = document.querySelector("h1")
+
+a.style.color = 'Green'
+
+a.addEventListener("click", function(){
+    a.innerHTML = 'Changed Text'
+})
