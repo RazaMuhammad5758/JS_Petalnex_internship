@@ -1,0 +1,47 @@
+[
+  {
+    "Name": "John Doe",
+    "Age": 20,
+    "SeatNo": 101,
+    "ContactNo": "1234567890",
+    "Gender": "Male",
+    "Grade": "A",
+    "FatherName": "Robert Doe"
+  },
+  {
+    "Name": "Jane Smith",
+    "Age": 22,
+    "SeatNo": 102,
+    "ContactNo": "0987654321",
+    "Gender": "Female",
+    "Grade": "B",
+    "FatherName": "Richard Smith"
+  },
+  {
+    "Name": "David Jones",
+    "Age": 21,
+    "SeatNo": 103,
+    "ContactNo": "1122334455",
+    "Gender": "Male",
+    "Grade": "A+",
+    "FatherName": "Andrew Jones"
+  },
+  {
+    "Name": "Emily Davis",
+    "Age": 23,
+    "SeatNo": 104,
+    "ContactNo": "5566778899",
+    "Gender": "Female",
+    "Grade": "B+",
+    "FatherName": "James Davis"
+  },
+  {
+    "Name": "Michael Brown",
+    "Age": 19,
+    "SeatNo": 105,
+    "ContactNo": "6677889900",
+    "Gender": "Male",
+    "Grade": "A-",
+    "FatherName": "Charles Brown"
+  }
+]
