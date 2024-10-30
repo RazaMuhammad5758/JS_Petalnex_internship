@@ -60,7 +60,7 @@ function agesfunc(age) {
     return age >= 15
 }
 
-console.log(fAges);
+console.log("filtered ages are: "+ fAges);
 
 // REDUCE 
 

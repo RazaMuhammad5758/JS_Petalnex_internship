@@ -13,6 +13,8 @@
 //promises ki 3 states hoti hen 
 //pending, fulfilled, rejected
 
+// Promises provide a way to handle asynchronous tasks like data fetching, file reading, or timers in a cleaner, more predictable manner than using traditional callbacks.
+
 const promiseOne = new Promise(function(resolve, reject){
     setTimeout(function(){
         console.log("Async task is completed");
