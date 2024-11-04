@@ -109,4 +109,22 @@ class WeatherApp {
     }
 }
 
+// Testing the Observer pattern
 
+// Create the subject
+const WeatherStation = new weatherStation();
+
+// Create observers
+const app1 = new WeatherApp("WeatherApp1");
+const app2 = new WeatherApp("WeatherApp2");
+
+// Subscribe observers to the weather station
+WeatherStation.subscribe(app1);
+WeatherStation.subscribe(app2);
+
+// Change temperature - all observers get notified
+WeatherStation.setTemperature(25);
+
+// Unsubscribe one observer and change temperature again
+WeatherStation.unsubscribe(app1);
+WeatherStation.setTemperature(30);
