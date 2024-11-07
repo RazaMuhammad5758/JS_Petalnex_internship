@@ -3,9 +3,9 @@ function randomPromise(taskName) {
       const success = Math.random() > 0.5; // Randomly decide success or failure
       setTimeout(() => {
         if (success) {
-          resolve(`${taskName} completed successfully`);
+          resolve(`${taskName} Success`);
         } else {
-          reject(new Error(`${taskName} failed`));
+          reject(new Error(`${taskName} error`));
         }
       }, 1000);
     });
