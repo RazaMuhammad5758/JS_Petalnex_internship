@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Throttle Function Test</title>
+</head>
+<body>
+  <button id="throttleButton">Click Me</button>
+
+  <script>
+    // The throttle function (your implementation)
+    function throttle(fn, limit) {
+      let lastCall = 0; // Timestamp of the last function call
+
+      return function(...args) {
+        const now = Date.now(); // Get current time in milliseconds
+
+        if (now - lastCall >= limit) {
+          lastCall = now; // Update the last call timestamp
+          fn.apply(this, args); // Call the original function with the correct `this` context and arguments
+        }
+      };
+    }
+
+    // Function to be throttled
+    function logMessage() {
+      console.log('Button clicked at:', new Date().toISOString());
+    }
+
+    // Create a throttled version of logMessage with a limit of 2 seconds (2000 ms)
+    const throttledLogMessage = throttle(logMessage, 2000);
+
+    // Attach event listener
+    document.getElementById('throttleButton').addEventListener('click', throttledLogMessage);
+  </script>
+</body>
+</html>
