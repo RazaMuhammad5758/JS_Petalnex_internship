@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debounce Example</title>
+</head>
+<body>
+    <h1>Resize the window to see the debounce effect in action</h1>
+    <script>
+        function debounce(fn, delay) {
+            let timerId;
+            return function(...args) {
+                clearTimeout(timerId);
+                timerId = setTimeout(() => {
+                    fn.apply(this, args);
+                }, delay);
+            };
+        }
+
+        const log = () => console.log('Debounced');
+        const debouncedLog = debounce(log, 500);
+
+        window.addEventListener('resize', debouncedLog);
+    </script>
+</body>
+</html>
