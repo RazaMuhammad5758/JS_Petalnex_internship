@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      margin: 20px 0;
+    }
+
+    .board {
+      display: grid;
+      grid-template-columns: repeat(4, 100px);
+      gap: 10px;
+      justify-content: center;
+      margin: 20px auto;
+    }
+
+    .card {
+      width: 100px;
+      height: 150px;
+      background-color: #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border-radius: 8px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .card.flipped, .card.matched {
+      background-color: #4caf50;
+      color: #fff;
+    }
+
+    .card.hidden {
+      background-color: #f4f4f9;
+      color: transparent;
+      cursor: default;
+    }
+  </style>
+</head>
+<body>
+  <h1>Memory Card Game</h1>
+  <div id="game-board" class="board"></div>
+
+  <script>
+    const cards = [1, 2, 3, 4, 1, 2, 3, 4];
+
+    // Shuffle function using Fisher-Yates algorithm
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    // Initialize shuffled cards
+    const shuffledCards = shuffle([...cards]);
+    const gameBoard = document.getElementById('game-board');
+    let flippedCards = [];
+    let matchedCards = [];
+
+    // Function to create and display cards on the board
+    function createBoard() {
+      shuffledCards.forEach((value, index) => {
+        const card = document.createElement('div');
+        card.classList.add('card');
+        card.dataset.index = index;
+        card.dataset.value = value;
+        card.addEventListener('click', flipCard);
+        gameBoard.appendChild(card);
+      });
+    }
+
+    // Function to handle card flips
+    function flipCard() {
+      const index = this.dataset.index;
+      if (matchedCards.includes(index) || flippedCards.some(card => card.dataset.index === index)) {
+        return; // Do nothing if card is already matched or flipped
+      }
+
+      this.classList.add('flipped');
+      this.textContent = this.dataset.value;
+      flippedCards.push(this);
+
+      if (flippedCards.length === 2) {
+        const [firstCard, secondCard] = flippedCards;
+        if (firstCard.dataset.value === secondCard.dataset.value) {
+          // Match found
+          matchedCards.push(firstCard.dataset.index, secondCard.dataset.index);
+          firstCard.classList.add('matched');
+          secondCard.classList.add('matched');
+          flippedCards = [];
+        } else {
+          // No match, flip back after a delay
+          setTimeout(() => {
+            firstCard.classList.remove('flipped');
+            secondCard.classList.remove('flipped');
+            firstCard.textContent = '';
+            secondCard.textContent = '';
+            flippedCards = [];
+          }, 1000);
+        }
+      }
+    }
+
+    // Create the game board
+    createBoard();
+  </script>
+</body>
+</html>
