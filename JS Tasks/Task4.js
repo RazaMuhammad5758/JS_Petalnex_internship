@@ -3,7 +3,7 @@ class EventEmitter {
       this.events = {}; // Object to store events and their listeners
     }
   
-    // Method to add a listener for a specific event.
+    // Method to add a listener for a specific event..
     on(event, listener) {
       if (!this.events[event]) {
         this.events[event] = []; // Create an array for the event if it doesn't exist
